@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — UV Tracker</title>
+<meta name="description" content="How UV Tracker handles your location, camera images and skin data. Images never leave your device.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="dot" aria-hidden="true"></span> UV Tracker</a>
+    <h1>Privacy policy</h1>
+    <p class="updated">Version 1 · Effective 28 August 2026</p>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+
+    <div class="card">
+      <p>
+        <strong>The short version.</strong> UV Tracker has no accounts and no advertising. Your
+        approximate location is sent to a weather service to fetch a UV forecast. Photographs of
+        the sky and of your skin are processed on your device and deleted immediately — they are
+        never uploaded. Everything else stays on your phone.
+      </p>
+    </div>
+
+    <p>
+      This policy describes the UV Tracker mobile application ("the app"), published by the UV
+      Tracker project ("we", "us"). It describes the app as it exists today. If we add accounts,
+      cloud sync or advertising, this policy will be updated and re-versioned before those features
+      ship, and the change will be noted in <a href="#changes">Changes to this policy</a>.
+    </p>
+
+    <h2>1. What the app collects</h2>
+
+    <table>
+      <thead>
+        <tr><th>Data</th><th>Why</th><th>Where it goes</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Approximate location (latitude &amp; longitude)</td>
+          <td>To fetch the UV index forecast for where you are</td>
+          <td>Sent to Open-Meteo. Not stored by us beyond the reading below.</td>
+        </tr>
+        <tr>
+          <td>Camera images of the sky</td>
+          <td>To estimate cloud cover and refine the UV reading</td>
+          <td>Processed in memory on your device. Never written to storage, never uploaded.</td>
+        </tr>
+        <tr>
+          <td>A photograph of your inner forearm</td>
+          <td>To estimate your skin tone</td>
+          <td>Written to a temporary file by the camera, read, then <strong>deleted immediately</strong>. Never uploaded.</td>
+        </tr>
+        <tr>
+          <td>Your estimated skin type</td>
+          <td>To calculate a safe-sun time for you rather than an average person</td>
+          <td>Stored only on your device.</td>
+        </tr>
+        <tr>
+          <td>Your last UV reading and app settings</td>
+          <td>To show a value when offline, and to remember your preferences</td>
+          <td>Stored only on your device.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      The app does <strong>not</strong> collect your name, email address, phone number, contacts,
+      or any account identifier — because it has no accounts. It contains no advertising SDK, no
+      analytics SDK, and no third-party tracking.
+    </p>
+
+    <h2>2. Location, specifically</h2>
+    <p>
+      The app requests location permission only while it is in use, and requests coarse accuracy —
+      the UV index varies over roughly ten-kilometre areas, so a precise fix is unnecessary. Your
+      coordinates are sent to <a href="https://open-meteo.com/" rel="noopener">Open-Meteo</a>, an
+      open weather API, to retrieve the forecast. Their handling of that request is governed by
+      <a href="https://open-meteo.com/en/terms" rel="noopener">Open-Meteo's terms and privacy
+      statement</a>. We send no identifier with the request, so it is not linked to you or your
+      device.
+    </p>
+    <p>If you decline location permission, the app cannot fetch a local forecast. Nothing else is affected.</p>
+
+    <h2>3. Camera and images</h2>
+    <p>
+      The camera is used for two features: reading cloud cover from the sky, and estimating skin
+      tone from a photograph of your inner forearm.
+    </p>
+    <p>
+      Sky frames are analysed as they arrive and are never saved. The forearm photograph is written
+      to a temporary file by the operating system's camera, read into memory to measure its average
+      colour, and then deleted straight away — including when the reading fails. Neither image is
+      uploaded, transmitted, or retained.
+    </p>
+    <p>
+      What is kept is the <em>result</em>: an estimated skin type and a colour measurement, stored
+      on your device only.
+    </p>
+
+    <h2>4. Where your data is stored</h2>
+    <p>
+      All data the app keeps is held in your device's private application storage. We operate no
+      servers and hold no copy of it. Uninstalling the app removes it permanently.
+    </p>
+
+    <h2>5. Sharing</h2>
+    <p>
+      We do not sell, rent, or share your data. The only outbound network request the app makes is
+      the forecast lookup described in section 2.
+    </p>
+
+    <h2>6. Your rights and choices</h2>
+    <ul>
+      <li><strong>Revoke permissions</strong> — location and camera access can be withdrawn at any time in your device settings.</li>
+      <li><strong>Delete your data</strong> — clearing the app's storage or uninstalling it erases everything, immediately and permanently.</li>
+      <li><strong>Access and portability</strong> — since nothing leaves your device, there is no copy for us to provide.</li>
+    </ul>
+    <p>
+      If you are in the EU, UK, or another region with comparable law, the lawful basis for
+      processing is your consent, given by granting the relevant permission, and withdrawn by
+      revoking it.
+    </p>
+
+    <h2>7. Children</h2>
+    <p>
+      UV Tracker is not directed at children under 13, and we do not knowingly collect data from
+      them. Since the app collects no personal identifiers at all, it holds no such data to remove.
+    </p>
+
+    <h2>8. Not a medical device</h2>
+    <p>
+      The app's readings are estimates derived from public forecast data and a phone camera. They
+      are not a medical device and not medical advice. Do not rely on them for diagnosis or
+      treatment of any condition.
+    </p>
+
+    <h2 id="changes">9. Changes to this policy</h2>
+    <p>
+      If the app's data handling changes, this page is updated and its version and effective date
+      raised before the change reaches you. Material changes — for instance introducing accounts,
+      cloud sync, or advertising — will also be surfaced in the app itself.
+    </p>
+
+    <h2>10. Contact</h2>
+    <p>
+      Questions about this policy: <a href="mailto:privacy@uvstracker.com">privacy@uvstracker.com</a>
+    </p>
+
+    <nav class="site">
+      <a href="/">Home</a>
+      <a href="terms.html">Terms of use</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 UV Tracker</span>
+    <span>uvstracker.com</span>
+  </div>
+</footer>
+</body>
+</html>

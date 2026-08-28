@@ -1,0 +1,121 @@
+/* UV Tracker site — hand-written, no build step, no dependencies. */
+
+:root {
+  --ink: #2b2018;
+  --ink-soft: #5d5048;
+  --surface: #fdf6f1;
+  --surface-raised: #fffaf7;
+  --line: #e8d9cf;
+  --accent: #b4610f;
+  --accent-soft: #f7e3cf;
+  --sky-top: #9fc1de;
+  --sky-low: #dce9f2;
+  --max: 44rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f2e9e3;
+    --ink-soft: #c3b4aa;
+    --surface: #17120f;
+    --surface-raised: #221a16;
+    --line: #3a2e27;
+    --accent: #f0a860;
+    --accent-soft: #3a2a1a;
+    --sky-top: #2c4869;
+    --sky-low: #1d2a38;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+.masthead {
+  background: linear-gradient(to bottom, var(--sky-top), var(--sky-low) 55%, var(--surface));
+  padding: 2.5rem 1.25rem 2rem;
+}
+
+.wrap { max-width: var(--max); margin: 0 auto; }
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.brand .dot {
+  width: 1.4rem; height: 1.4rem; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffe9a8, #f0a33c 70%);
+  box-shadow: 0 0 1.2rem rgba(240, 163, 60, .55);
+}
+
+h1 { font-size: clamp(1.75rem, 5vw, 2.4rem); line-height: 1.2; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.2rem; margin: 2.25rem 0 .5rem; }
+h3 { font-size: 1rem; margin: 1.5rem 0 .35rem; }
+
+.lede { font-size: 1.1rem; color: var(--ink-soft); margin: 0 0 1rem; }
+
+main { padding: 0 1.25rem 4rem; }
+
+a { color: var(--accent); }
+
+.pill {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: .3rem .85rem;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+}
+
+.card {
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: .9rem;
+  padding: 1.1rem 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.card p:last-child { margin-bottom: 0; }
+
+.grid { display: grid; gap: .9rem; grid-template-columns: 1fr; }
+@media (min-width: 34rem) { .grid { grid-template-columns: 1fr 1fr; } }
+
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: .95rem; display: block; overflow-x: auto; }
+th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 600; }
+
+.updated { color: var(--ink-soft); font-size: .9rem; }
+
+nav.site { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 1rem; font-size: .95rem; }
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 1.25rem 3rem;
+  color: var(--ink-soft);
+  font-size: .9rem;
+}
+
+footer .wrap { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; }
+
+.skip {
+  position: absolute; left: -9999px;
+}
+.skip:focus {
+  left: 1rem; top: 1rem; position: fixed; z-index: 10;
+  background: var(--surface-raised); padding: .6rem 1rem; border-radius: .5rem;
+  border: 1px solid var(--line);
+}
