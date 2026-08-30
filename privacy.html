@@ -4,26 +4,73 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy policy — UV Tracker</title>
-<meta name="description" content="How UV Tracker handles your location, camera images and skin data. Images never leave your device.">
+<meta name="description" content="How UV Tracker handles your location, camera images and skin data. Images never leave your device. No accounts, no ads, no analytics.">
+<link rel="canonical" href="https://uvstracker.com/privacy.html">
+<link rel="alternate" hreflang="en" href="https://uvstracker.com/privacy.html">
+<link rel="alternate" hreflang="vi" href="https://uvstracker.com/vi/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://uvstracker.com/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="UV Tracker">
+<meta property="og:title" content="Privacy policy — UV Tracker">
+<meta property="og:description" content="How UV Tracker handles your location, camera images and skin data. Images never leave your device. No accounts, no ads, no analytics.">
+<meta property="og:url" content="https://uvstracker.com/privacy.html">
+<meta property="og:image" content="https://uvstracker.com/brand/og-image-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4a90c4">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Source+Sans+3:wght@400;600&display=swap">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
-<header class="masthead">
+<header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/"><span class="dot" aria-hidden="true"></span> UV Tracker</a>
-    <h1>Privacy policy</h1>
-    <p class="updated">Version 1 · Effective 28 August 2026</p>
+    <a class="brand" href="/"><img src="brand/mark.svg" alt="" width="30" height="30"> UV Tracker</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="support.html">Support</a>
+      <a class="lang" href="vi/privacy.html" lang="vi" hreflang="vi">Tiếng Việt</a>
+    </nav>
   </div>
 </header>
 
 <main id="main">
   <div class="wrap">
+    <div class="legal-head">
+      <span class="eyebrow">Legal</span>
+      <h1>Privacy policy</h1>
+      <p class="updated">Version 1 · Effective 28 August 2026</p>
+    </div>
+    <div class="legal">
+      <nav class="toc" aria-label="Contents">
+        <ol>
+          <li><a href="#glance">At a glance</a></li>
+          <li><a href="#collects">1. What the app collects</a></li>
+          <li><a href="#location">2. Location</a></li>
+          <li><a href="#camera">3. Camera and images</a></li>
+          <li><a href="#storage">4. Where your data is stored</a></li>
+          <li><a href="#sharing">5. Sharing</a></li>
+          <li><a href="#rights">6. Your rights and choices</a></li>
+          <li><a href="#children">7. Children</a></li>
+          <li><a href="#medical">8. Not a medical device</a></li>
+          <li><a href="#changes">9. Changes to this policy</a></li>
+          <li><a href="#contact">10. Contact</a></li>
+          <li><a href="#history">Version history</a></li>
+        </ol>
+      </nav>
+      <div class="legal-body">
 
-    <div class="card">
+    <div class="card glance" id="glance">
       <p>
-        <strong>The short version.</strong> UV Tracker has no accounts and no advertising. Your
+        <strong>At a glance.</strong> UV Tracker has no accounts and no advertising. Your
         approximate location is sent to a weather service to fetch a UV forecast. Photographs of
         the sky and of your skin are processed on your device and deleted immediately — they are
         never uploaded. Everything else stays on your phone.
@@ -37,48 +84,63 @@
       ship, and the change will be noted in <a href="#changes">Changes to this policy</a>.
     </p>
 
-    <h2>1. What the app collects</h2>
+    <h2 id="collects">1. What the app collects</h2>
+    <p>The table uses the categories of Google Play's Data Safety section, so what you read here is what the store listing declares.</p>
 
-    <table>
+    <div class="table-scroll">
+    <table class="data-table">
       <thead>
-        <tr><th>Data</th><th>Why</th><th>Where it goes</th></tr>
+        <tr><th scope="col">Data type</th><th scope="col">Collected?</th><th scope="col">Shared?</th><th scope="col">Purpose</th><th scope="col">Where it goes</th></tr>
       </thead>
       <tbody>
         <tr>
-          <td>Approximate location (latitude &amp; longitude)</td>
+          <td><strong>Location</strong> — approximate location</td>
+          <td>Yes, in use only</td>
+          <td>Yes, to Open-Meteo</td>
           <td>To fetch the UV index forecast for where you are</td>
-          <td>Sent to Open-Meteo. Not stored by us beyond the reading below.</td>
+          <td>Sent to Open-Meteo without any identifier. Not stored by us; the last reading is kept on your device.</td>
         </tr>
         <tr>
-          <td>Camera images of the sky</td>
+          <td><strong>Photos and videos</strong> — camera frames of the sky</td>
+          <td>No (processed in memory only)</td>
+          <td>No</td>
           <td>To estimate cloud cover and refine the UV reading</td>
-          <td>Processed in memory on your device. Never written to storage, never uploaded.</td>
+          <td>Analysed as they arrive. Never written to storage, never uploaded.</td>
         </tr>
         <tr>
-          <td>A photograph of your inner forearm</td>
+          <td><strong>Photos and videos</strong> — a photograph of your inner forearm</td>
+          <td>No (temporary file, deleted immediately)</td>
+          <td>No</td>
           <td>To estimate your skin tone</td>
           <td>Written to a temporary file by the camera, read, then <strong>deleted immediately</strong>. Never uploaded.</td>
         </tr>
         <tr>
-          <td>Your estimated skin type</td>
-          <td>To calculate a safe-sun time for you rather than an average person</td>
+          <td><strong>Health and fitness</strong> — your estimated skin type</td>
+          <td>No (device only)</td>
+          <td>No</td>
+          <td>To calculate a safe sun time for you rather than an average person</td>
           <td>Stored only on your device.</td>
         </tr>
         <tr>
-          <td>Your last UV reading and app settings</td>
-          <td>To show a value when offline, and to remember your preferences</td>
+          <td><strong>App activity</strong> — your last UV reading and settings</td>
+          <td>No (device only)</td>
+          <td>No</td>
+          <td>To show a value when offline and remember your preferences</td>
           <td>Stored only on your device.</td>
         </tr>
       </tbody>
     </table>
+    </div>
 
     <p>
-      The app does <strong>not</strong> collect your name, email address, phone number, contacts,
-      or any account identifier — because it has no accounts. It contains no advertising SDK, no
-      analytics SDK, and no third-party tracking.
+      "Collected" follows Play's definition: data transmitted off your device. Data that stays on
+      your phone, or is processed and discarded, is not collected. The app does <strong>not</strong>
+      collect your name, email address, phone number, contacts, or any account identifier — because
+      it has no accounts. It contains no advertising SDK, no analytics SDK, and no third-party
+      tracking.
     </p>
 
-    <h2>2. Location, specifically</h2>
+    <h2 id="location">2. Location, specifically</h2>
     <p>
       The app requests location permission only while it is in use, and requests coarse accuracy —
       the UV index varies over roughly ten-kilometre areas, so a precise fix is unnecessary. Your
@@ -90,7 +152,7 @@
     </p>
     <p>If you decline location permission, the app cannot fetch a local forecast. Nothing else is affected.</p>
 
-    <h2>3. Camera and images</h2>
+    <h2 id="camera">3. Camera and images</h2>
     <p>
       The camera is used for two features: reading cloud cover from the sky, and estimating skin
       tone from a photograph of your inner forearm.
@@ -106,19 +168,19 @@
       on your device only.
     </p>
 
-    <h2>4. Where your data is stored</h2>
+    <h2 id="storage">4. Where your data is stored</h2>
     <p>
       All data the app keeps is held in your device's private application storage. We operate no
       servers and hold no copy of it. Uninstalling the app removes it permanently.
     </p>
 
-    <h2>5. Sharing</h2>
+    <h2 id="sharing">5. Sharing</h2>
     <p>
       We do not sell, rent, or share your data. The only outbound network request the app makes is
       the forecast lookup described in section 2.
     </p>
 
-    <h2>6. Your rights and choices</h2>
+    <h2 id="rights">6. Your rights and choices</h2>
     <ul>
       <li><strong>Revoke permissions</strong> — location and camera access can be withdrawn at any time in your device settings.</li>
       <li><strong>Delete your data</strong> — clearing the app's storage or uninstalling it erases everything, immediately and permanently.</li>
@@ -130,13 +192,13 @@
       revoking it.
     </p>
 
-    <h2>7. Children</h2>
+    <h2 id="children">7. Children</h2>
     <p>
       UV Tracker is not directed at children under 13, and we do not knowingly collect data from
       them. Since the app collects no personal identifiers at all, it holds no such data to remove.
     </p>
 
-    <h2>8. Not a medical device</h2>
+    <h2 id="medical">8. Not a medical device</h2>
     <p>
       The app's readings are estimates derived from public forecast data and a phone camera. They
       are not a medical device and not medical advice. Do not rely on them for diagnosis or
@@ -150,23 +212,40 @@
       cloud sync, or advertising — will also be surfaced in the app itself.
     </p>
 
-    <h2>10. Contact</h2>
+    <h2 id="contact">10. Contact</h2>
     <p>
       Questions about this policy: <a href="mailto:privacy@uvstracker.com">privacy@uvstracker.com</a>
     </p>
 
-    <nav class="site">
-      <a href="/">Home</a>
-      <a href="terms.html">Terms of use</a>
-      <a href="support.html">Support</a>
-    </nav>
+    <h2 id="history">Version history</h2>
+    <dl class="history">
+      <dt>Version 1 · 28 August 2026</dt>
+      <dd>Initial policy. No accounts, no advertising, no analytics; coordinates to Open-Meteo only; camera images processed on-device and deleted; skin type on-device.</dd>
+      <dt>Planned: Version 2</dt>
+      <dd>Will be published before optional Google sign-in and cross-device sync ship. Adds the Google account email and ID, the synced data (settings, history; skin profile only with separate opt-in), crash diagnostics, retention periods, and account deletion from the web.</dd>
+      <dt>Planned: Version 3</dt>
+      <dd>Will be published before the first advertisement is shown. Adds the advertising identifier and the consent choices offered in the app.</dd>
+    </dl>
+
+      </div>
+    </div>
   </div>
 </main>
 
-<footer>
+<footer class="site-footer">
   <div class="wrap">
-    <span>© 2026 UV Tracker</span>
-    <span>uvstracker.com</span>
+    <div>
+      <a class="brand" href="/"><img src="brand/mark.svg" alt="" width="26" height="26"> UV Tracker</a>
+      <p>Free forever &middot; no subscriptions &middot; not a medical device.</p>
+      <p>&copy; 2026 UV Tracker &middot; uvstracker.com</p>
+    </div>
+    <nav class="site-nav" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms of use</a>
+      <a href="support.html">Support</a>
+      <a class="lang" href="vi/privacy.html" lang="vi" hreflang="vi">Tiếng Việt</a>
+    </nav>
   </div>
 </footer>
 </body>
