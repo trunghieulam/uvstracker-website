@@ -3,7 +3,7 @@
 :root {
   --ink: #2b2018;
   --ink-soft: #5d5048;
-  --ink-faint: #8a7b70;
+  --ink-faint: #7a6a5e;
   --surface: #fdf9f5;
   --surface-raised: #ffffff;
   --cream: #fbf3ec;
@@ -168,3 +168,11 @@ img { max-width: 100%; height: auto; display: block; }
 .history { border-left: 3px solid var(--accent); padding-left: 1rem; }
 .history dt { font-weight: 600; }
 .history dd { margin: 0 0 .75rem; color: var(--ink-soft); }
+
+/* support FAQ */
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; padding: .9rem 0; font: 600 1.05rem/1.35 var(--body); list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--accent); font-weight: 700; }
+.faq details[open] summary::after { content: "\2013"; }
+.faq details > p { margin: 0 0 1rem; color: var(--ink-soft); }
