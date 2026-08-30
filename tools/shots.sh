@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Renders one page at 360/768/1280 px in light and dark. Usage: tools/shots.sh index.html
+# Renders one page at 500/768/1280 CSS px in light and dark. Usage: tools/shots.sh index.html
+# 500 is this Chrome's layout-width floor, not a real target — see uv-website-deploy skill.
 set -u
 cd "$(dirname "$0")/.."
 CHROME="${CHROME_PATH:-C:/Program Files/Google/Chrome/Application/chrome.exe}"
@@ -15,9 +16,9 @@ for theme in light dark; do
   if [ "$theme" = dark ]; then
     sed -E 's#href="(\.\./)?styles\.css"#href="\1styles-dark.css"#' "$src" > "${src%.html}.dark.html"; src="${src%.html}.dark.html"
   fi
-  for w in 360 768 1280; do
+  for w in 500 768 1280; do
     out="$outdir/$name-$w-$theme.png"
-    "$CHROME" --headless=new --hide-scrollbars --force-device-scale-factor=1 --window-size="$w,2600" \
+    "$CHROME" --headless=new --hide-scrollbars --force-device-scale-factor=1 --window-size="$w,4600" \
       --screenshot="$out" "file:///$root/$src" 2>/dev/null
   done
 done

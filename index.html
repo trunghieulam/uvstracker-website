@@ -27,7 +27,7 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
+<header class="site-header on-hero">
   <div class="wrap">
     <a class="brand" href="/"><img src="brand/mark.svg" alt="" width="30" height="30"> UV Tracker</a>
     <nav class="site-nav" aria-label="Site">
@@ -39,84 +39,74 @@
 </header>
 
 <main id="main">
-  <div class="wrap old-hero-tmp">
-<h1>Know your sun, before it burns.</h1>
-    <p class="lede">
-      UV Tracker shows the UV index where you actually are, refines it by reading the sky through
-      your camera, and turns that into one number you can act on: how long you can safely stay out.
-    </p>
-    <p><span class="pill">Free forever · no subscriptions</span></p>
-  </div>
-  <div class="wrap">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">UV Tracker · Android</span>
+        <h1 id="hero-title">How safe are you in today's sun?</h1>
+        <p class="lede">Point your phone at the sky and at your arm. Ten seconds later: one number, tuned to your skin, and the one thing to do.</p>
+        <span class="pill">Free forever · no subscriptions</span>
+        <span class="badge-soon">Coming to Google Play</span>
+      </div>
+      <div class="device"><img src="img/en/uv-index.png" alt="UV Tracker showing today's UV index and the safe sun time card" width="1080" height="2400"></div>
+    </div>
+  </section>
 
-    <h2>What it does</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>The UV index where you stand</h3>
-        <p>
-          Your location is used to fetch a live forecast, including the clear-sky value the sky
-          scan needs. No account required.
-        </p>
-      </div>
-      <div class="card">
-        <h3>A sky check with your camera</h3>
-        <p>
-          Point at open sky and the app estimates cloud cover, then reduces the clear-sky index
-          accordingly — a local reading rather than a regional forecast.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Your skin, not an average one</h3>
-        <p>
-          A photo of your inner forearm estimates your skin tone, so the safe-sun time you see is
-          calculated for you rather than for a notional average person.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Safe sun time</h3>
-        <p>
-          One number: how many minutes of unprotected sun stay below the sunburn threshold for your
-          skin, at the UV level measured right now.
-        </p>
+  <section class="section" aria-labelledby="how-title">
+    <div class="wrap">
+      <span class="eyebrow">How it works</span>
+      <h2 id="how-title">Sky, arm, number.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="device"><img src="img/en/sky-scanner.png" alt="The Sky Scanner screen reading cloud cover" width="1080" height="2400" loading="lazy"></div>
+          <h3>Point at the sky</h3>
+          <p>The app fetches the UV forecast for where you stand, then reads cloud cover through your camera to make the number local rather than regional.</p>
+        </div>
+        <div class="step">
+          <div class="device"><img src="img/en/skin.png" alt="The Skin screen estimating skin type from a forearm photo" width="1080" height="2400" loading="lazy"></div>
+          <h3>Photograph your inner forearm</h3>
+          <p>A single photo estimates your skin tone, so what you see is calculated for you — not for a notional average person.</p>
+        </div>
+        <div class="step">
+          <div class="device"><img src="img/en/uv-index.png" alt="The safe sun time card on the UV index screen" width="1080" height="2400" loading="lazy"></div>
+          <h3>Read your safe sun time</h3>
+          <p>One number: how many minutes of unprotected sun stay below the sunburn threshold for your skin, at the UV level right now.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <h2>Free, forever</h2>
-    <div class="card">
-      <p>
-        UV Tracker is free and will stay free. There is no paid tier, no subscription, and no
-        feature held back behind a purchase. Sun safety is not something to paywall.
-      </p>
-      <p>
-        The app is supported by modest advertising and clearly-disclosed sun-protection product
-        suggestions. Nothing that interrupts a reading, and never between you and a safety warning.
-      </p>
+  <section class="section alt" aria-labelledby="free-title">
+    <div class="wrap narrow">
+      <h2 id="free-title">Free, forever.</h2>
+      <p>UV Tracker is free and will stay free. There is no paid tier, no subscription, and no feature held back behind a purchase. Sun safety is not something to paywall.</p>
+      <p>The app is supported by modest advertising and clearly-disclosed sun-protection product suggestions. Nothing that interrupts a reading, and never between you and a safety warning.</p>
     </div>
+  </section>
 
-    <h2>What it is not</h2>
-    <div class="card">
-      <p>
-        <strong>UV Tracker is not a medical device.</strong> Its readings are estimates derived
-        from public forecast data and a phone camera, and they are not a substitute for
-        professional medical advice, diagnosis, or treatment. If you have concerns about your skin,
-        see a doctor or dermatologist.
-      </p>
-      <p>
-        <strong>Never point the camera directly at the sun.</strong> It can damage your eyes and
-        the camera sensor.
-      </p>
+  <section class="section" aria-labelledby="limits-title">
+    <div class="wrap">
+      <h2 id="limits-title">Honest about its limits</h2>
+      <div class="trust">
+        <div class="card">
+          <h3>Not a medical device</h3>
+          <p>Readings are estimates derived from public forecast data and a phone camera. They are not a substitute for professional medical advice, diagnosis, or treatment. If you have concerns about your skin, see a doctor or dermatologist.</p>
+        </div>
+        <div class="card">
+          <h3>Never point the camera at the sun</h3>
+          <p>It can damage your eyes and the camera sensor. Aim at open sky, away from the sun — the app reminds you every time.</p>
+        </div>
+        <div class="card">
+          <h3>Your privacy, briefly</h3>
+          <p>Photographs of the sky and of your skin are processed on your device and deleted immediately. They are never uploaded. Your skin type and settings stay on your phone. <a href="privacy.html">Read the full policy</a>.</p>
+        </div>
+        <div class="card">
+          <h3>Questions?</h3>
+          <p>Why the sky scan differs from the forecast, what to do when a reading looks off, how to delete your data — the <a href="support.html">support page</a> answers the common ones, and a human answers the rest.</p>
+        </div>
+      </div>
     </div>
-
-    <h2>Your privacy, briefly</h2>
-    <div class="card">
-      <p>
-        Photographs of the sky and of your skin are processed on your device and deleted
-        immediately. They are never uploaded. Your skin type and settings are stored only on your
-        phone.
-      </p>
-      <p>The full detail is in the <a href="privacy.html">privacy policy</a>.</p>
-    </div>
-  </div>
+  </section>
 </main>
 
 <footer class="site-footer">
