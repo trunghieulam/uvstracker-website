@@ -1,0 +1,1 @@
+{ "extends": ["html-validate:standard"], "rules": { "no-trailing-whitespace": "off" } }
