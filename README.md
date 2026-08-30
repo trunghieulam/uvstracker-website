@@ -57,3 +57,33 @@ GitHub Pages, from the default branch root:
 The policy makes concrete promises the app currently keeps: camera images are processed on-device
 and deleted, nothing but coordinates leaves the phone, and there is no tracking. If a future change
 would make any of those statements untrue, the policy changes first.
+
+## Brand exports
+
+`brand/mark.svg` is the only source of the brand mark; every icon, favicon and store graphic below
+is a headless-Chrome render of a wrapper page in `brand/export/`. Re-render after any change to
+the mark:
+
+```bash
+CHROME="C:/Program Files/Google/Chrome/Application/chrome.exe"
+root=$(cygpath -m "$(pwd)" | sed 's/ /%20/g')
+shot() {
+  out=$(cygpath -m "$(pwd)/$3")
+  "$CHROME" --headless=new --hide-scrollbars --force-device-scale-factor=1 --virtual-time-budget=5000 \
+    --window-size="$2" --screenshot="$out" "file:///$root/brand/export/$1"
+}
+shot app-icon.html 1024,1024 brand/app-icon-1024.png
+shot play-icon.html 512,512 brand/play-icon-512.png
+shot apple-touch-icon.html 180,180 apple-touch-icon.png
+shot favicon-32.html 32,32 favicon-32.png
+shot feature-graphic.html 1024,500 brand/feature-graphic-1024x500.png
+shot og-image.html 1200,630 brand/og-image-1200x630.png
+```
+
+| File | Feeds |
+| :--- | :--- |
+| `brand/app-icon-1024.png` | Copied to the app repo as `assets/icon/app_icon.png` (Stage 2 launcher icon source) |
+| `brand/play-icon-512.png` | Play Store listing icon |
+| `brand/feature-graphic-1024x500.png` | Play Store feature graphic |
+| `brand/og-image-1200x630.png` | `og:image` on every page |
+| `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` | Browser tab and iOS home screen icons |

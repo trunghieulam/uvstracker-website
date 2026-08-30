@@ -1,0 +1,13 @@
+{
+  "name": "UV Tracker",
+  "short_name": "UV Tracker",
+  "description": "How safe are you in today's sun? A personal UV reading, free forever.",
+  "icons": [
+    { "src": "/brand/play-icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "theme_color": "#4A90C4",
+  "background_color": "#FBF3EC",
+  "display": "browser",
+  "start_url": "/"
+}
