@@ -1,9 +1,11 @@
 # uvstracker.com
 
-The public website for the **UV Tracker** app — landing page, privacy policy, terms and support.
+The public website for the **UV Tracker** app — landing page, privacy policy, terms and support,
+in English and Vietnamese.
 
-Hand-written static HTML and one stylesheet. No framework, no build step, no dependencies. It is
-meant to load instantly, stay legible for years, and never break because a toolchain moved on.
+Hand-written static HTML and one stylesheet, zero JavaScript. No framework, no build step, no
+dependencies. It is meant to load instantly, stay legible for years, and never break because a
+toolchain moved on.
 
 ## Why it exists
 
@@ -11,16 +13,41 @@ The privacy policy is the load-bearing page. Google Play requires a publicly rea
 before an app that uses location or the camera can be published, and AdMob and Firebase require one
 before they may be used at all. Everything else on the site is secondary to that.
 
-## Pages
+## Structure
 
-| File | Purpose |
-| :--- | :--- |
-| `index.html` | What the app does, and the free-forever promise |
-| `privacy.html` | Privacy policy — **keep accurate to the shipped app** |
-| `terms.html` | Terms of use, incl. the not-a-medical-device disclaimer |
-| `support.html` | FAQ and contact route, required by store listings |
-| `styles.css` | The whole stylesheet; light and dark via `prefers-color-scheme` |
-| `CNAME` | Custom domain for GitHub Pages |
+```
+index.html  privacy.html  terms.html  support.html  404.html      # English
+vi/index.html  vi/privacy.html  vi/terms.html  vi/support.html    # Vietnamese mirror, file-for-file
+styles.css            # tokens + every component, light/dark via prefers-color-scheme
+brand/                # the mark, its exports, and the render wrappers that produce them
+img/en/*.png img/vi/*.png   # app screenshots from the Pixel 8 emulator
+tools/                # check.sh, shots.sh, lighthouse.sh — the verification harness
+sitemap.xml  robots.txt  CNAME
+```
+
+`vi/` mirrors the English tree one file at a time — same classes, same structure, different text.
+The privacy policy is versioned with the app: v1 today (no accounts, no ads), v2 when accounts and
+sync ship, v3 when the first ad does. Never let the policy describe a feature that isn't shipped.
+
+## Checks
+
+Run before every commit:
+
+```bash
+tools/check.sh              # every page: validity, links, alt/width/height, zero-JS, no stray "burn"
+tools/shots.sh index.html   # screenshots at 500/768/1280 px, light + dark, for a visual read
+tools/lighthouse.sh index.html privacy.html   # needs network on first run (fetches html-validate/lighthouse)
+```
+
+500 px is the narrowest width this machine's headless Chrome can lay out — see
+`.claude/skills/uv-website-deploy/SKILL.md` in the app repo before assuming a layout bug at that
+width; write mobile CSS breakpoints ≥500 px so they're actually checkable here.
+
+## Screenshots
+
+The eight files under `img/en/` and `img/vi/` come from the Pixel 8 emulator, 1080×2400, per
+`docs/ops/website-screenshots.md` in the app repo. Re-shoot them whenever the UI they show
+changes — the Today tab (plan 3B) is the next known trigger.
 
 ## Local preview
 
@@ -41,8 +68,10 @@ GitHub Pages, from the default branch root:
    - and a `CNAME` for `www` → `trunghieulam.github.io`
 4. Back in Settings → Pages, tick **Enforce HTTPS** once the certificate is issued.
 
-## Before publishing — two things that still need a decision
+## Before publishing — things that still need a decision
 
+0. **`vi/privacy.html` and `vi/terms.html` carry an owner-review comment** at the top of the file.
+   Read the Vietnamese legal text, fix anything, then delete that comment before pushing.
 1. **The contact addresses are placeholders.** The pages reference `privacy@uvstracker.com`,
    `support@uvstracker.com` and `hello@uvstracker.com`. Set up forwarding for these at the domain
    registrar, or change them to a real address. A privacy policy with a dead contact address fails
