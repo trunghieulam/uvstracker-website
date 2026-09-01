@@ -196,4 +196,32 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/best-time-of-day-for-sun.html"/>
     <lastmod>2026-09-01</lastmod>
   </url>
+  <url>
+    <loc>https://www.uvstracker.com/learn/uv-and-vitamin-d.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.uvstracker.com/learn/uv-and-vitamin-d.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.uvstracker.com/vi/learn/uv-and-vitamin-d.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/uv-and-vitamin-d.html"/>
+    <lastmod>2026-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.uvstracker.com/vi/learn/uv-and-vitamin-d.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.uvstracker.com/learn/uv-and-vitamin-d.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.uvstracker.com/vi/learn/uv-and-vitamin-d.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/uv-and-vitamin-d.html"/>
+    <lastmod>2026-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.uvstracker.com/learn/kids-sun-safety.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.uvstracker.com/learn/kids-sun-safety.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.uvstracker.com/vi/learn/kids-sun-safety.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/kids-sun-safety.html"/>
+    <lastmod>2026-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.uvstracker.com/vi/learn/kids-sun-safety.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.uvstracker.com/learn/kids-sun-safety.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.uvstracker.com/vi/learn/kids-sun-safety.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/kids-sun-safety.html"/>
+    <lastmod>2026-09-01</lastmod>
+  </url>
 </urlset>
