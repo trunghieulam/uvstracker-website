@@ -84,6 +84,7 @@ img { max-width: 100%; height: auto; display: block; }
 @media (min-width: 48rem) { .site-footer .wrap { grid-template-columns: 1fr auto; align-items: start; } }
 .site-footer .brand { font-size: 1.05rem; color: var(--ink); }
 .site-footer p { margin: .5rem 0 0; }
+.site-footer .fine { font-size: .85rem; opacity: .8; }
 
 .skip { position: absolute; left: -9999px; }
 .skip:focus { left: 1rem; top: 1rem; position: fixed; z-index: 10; background: var(--surface-raised); padding: .6rem 1rem; border-radius: .5rem; border: 1px solid var(--line); }
@@ -119,7 +120,10 @@ img { max-width: 100%; height: auto; display: block; }
 .hero-copy .lede { font-size: 1.2rem; max-width: 34ch; margin: 0; }
 .hero-copy .pill { background: rgba(255,255,255,.75); color: var(--accent); }
 @media (prefers-color-scheme: dark) { .hero-copy .pill { background: rgba(0,0,0,.35); } }
-.badge-soon { display: inline-flex; align-items: center; gap: .5rem; border: 1.5px solid currentColor; border-radius: .6rem; padding: .55rem .9rem; font-weight: 600; opacity: .9; }
+/* The official Play badge PNG carries its own transparent margin, so no padding here. */
+.store-badge { display: inline-block; line-height: 0; border-radius: .6rem; }
+.store-badge img { display: block; height: 4.7rem; width: auto; }
+.store-badge:hover img, .store-badge:focus-visible img { opacity: .88; }
 
 .device {
   width: min(100%, 15.5rem); aspect-ratio: 9 / 20; margin: 0 auto; padding: .5rem;
