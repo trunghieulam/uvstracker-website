@@ -2,7 +2,7 @@
 # Structural rules for uvstracker.com. Usage: tools/check.sh [page.html …]  (no args = every page)
 set -u
 cd "$(dirname "$0")/.."
-pages=("$@"); [ ${#pages[@]} -eq 0 ] && pages=( *.html vi/*.html )
+pages=("$@"); [ ${#pages[@]} -eq 0 ] && pages=( *.html vi/*.html learn/*.html vi/learn/*.html )
 fail=0
 err() { echo "FAIL $1: $2"; fail=1; }
 
@@ -21,6 +21,17 @@ for p in "${pages[@]}"; do
   grep -q 'https://uvstracker\.com' "$p" && err "$p" "apex host — use https://www.uvstracker.com"
   # Positive framing: the word 'burn' only inside 'sunburn'.
   if grep -ioE '[a-z]*burn[a-z]*' "$p" | grep -viE '^sunburn' | grep -q .; then err "$p" "'burn' outside 'sunburn'"; fi
+  case "$p" in
+    learn/index.html|vi/learn/index.html) ;;
+    learn/*.html|vi/learn/*.html)
+      grep -q 'class="byline"' "$p" || err "$p" "learn page without byline"
+      grep -q 'class="references"' "$p" || err "$p" "learn page without references section"
+      grep -q 'class="disclaimer"' "$p" || err "$p" "learn page without disclaimer"
+      grep -q 'application/ld+json' "$p" || err "$p" "learn page without JSON-LD"
+      n=$(grep -c 'class="copy-attribution"' "$p")
+      [ "$n" -ge 1 ] && [ "$n" -le 2 ] || err "$p" "copy-attribution spans: $n (need 1-2)"
+      ;;
+  esac
   while read -r tag; do
     for a in alt width height; do echo "$tag" | grep -q " $a=" || err "$p" "img without $a: $tag"; done
   done < <(grep -oE '<img[^>]*>' "$p")
