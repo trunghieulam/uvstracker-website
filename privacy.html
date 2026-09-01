@@ -89,49 +89,47 @@
     <h2 id="collects">1. What the app collects</h2>
     <p>The table uses the categories of Google Play's Data Safety section, so what you read here is what the store listing declares.</p>
 
-    <div class="table-scroll">
-    <table class="data-table">
-      <thead>
-        <tr><th scope="col">Data type</th><th scope="col">Collected?</th><th scope="col">Shared?</th><th scope="col">Purpose</th><th scope="col">Where it goes</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Location</strong> — approximate location</td>
-          <td>Yes, in use only</td>
-          <td>Yes, to Open-Meteo</td>
-          <td>To fetch the UV index forecast for where you are</td>
-          <td>Sent to Open-Meteo without any identifier. Not stored by us; the last reading is kept on your device.</td>
-        </tr>
-        <tr>
-          <td><strong>Photos and videos</strong> — camera frames of the sky</td>
-          <td>No (processed in memory only)</td>
-          <td>No</td>
-          <td>To estimate cloud cover and refine the UV reading</td>
-          <td>Analysed as they arrive. Never written to storage, never uploaded.</td>
-        </tr>
-        <tr>
-          <td><strong>Photos and videos</strong> — a photograph of your inner forearm</td>
-          <td>No (temporary file, deleted immediately)</td>
-          <td>No</td>
-          <td>To estimate your skin tone</td>
-          <td>Written to a temporary file by the camera, read, then <strong>deleted immediately</strong>. Never uploaded.</td>
-        </tr>
-        <tr>
-          <td><strong>Health and fitness</strong> — your estimated skin type</td>
-          <td>No (device only)</td>
-          <td>No</td>
-          <td>To calculate a safe sun time for you rather than an average person</td>
-          <td>Stored only on your device.</td>
-        </tr>
-        <tr>
-          <td><strong>App activity</strong> — your last UV reading and settings</td>
-          <td>No (device only)</td>
-          <td>No</td>
-          <td>To show a value when offline and remember your preferences</td>
-          <td>Stored only on your device.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="data-disclosure">
+      <details class="data-row" data-collected="yes">
+        <summary><span class="data-label"><strong>Location</strong> — approximate location</span><span class="data-pill">Collected</span><span class="data-chev" aria-hidden="true">▸</span></summary>
+        <dl class="data-fields">
+          <div class="data-field"><dt>Shared?</dt><dd>Yes, to Open-Meteo</dd></div>
+          <div class="data-field"><dt>Purpose</dt><dd>To fetch the UV index forecast for where you are</dd></div>
+          <div class="data-field"><dt>Where it goes</dt><dd>Sent to Open-Meteo without any identifier. Not stored by us; the last reading is kept on your device.</dd></div>
+        </dl>
+      </details>
+      <details class="data-row" data-collected="no">
+        <summary><span class="data-label"><strong>Photos and videos</strong> — camera frames of the sky</span><span class="data-pill">Not collected</span><span class="data-chev" aria-hidden="true">▸</span></summary>
+        <dl class="data-fields">
+          <div class="data-field"><dt>Shared?</dt><dd>No</dd></div>
+          <div class="data-field"><dt>Purpose</dt><dd>To estimate cloud cover and refine the UV reading</dd></div>
+          <div class="data-field"><dt>Where it goes</dt><dd>Analysed as they arrive. Never written to storage, never uploaded.</dd></div>
+        </dl>
+      </details>
+      <details class="data-row" data-collected="no">
+        <summary><span class="data-label"><strong>Photos and videos</strong> — a photograph of your inner forearm</span><span class="data-pill">Not collected</span><span class="data-chev" aria-hidden="true">▸</span></summary>
+        <dl class="data-fields">
+          <div class="data-field"><dt>Shared?</dt><dd>No</dd></div>
+          <div class="data-field"><dt>Purpose</dt><dd>To estimate your skin tone</dd></div>
+          <div class="data-field"><dt>Where it goes</dt><dd>Written to a temporary file by the camera, read, then <strong>deleted immediately</strong>. Never uploaded.</dd></div>
+        </dl>
+      </details>
+      <details class="data-row" data-collected="no">
+        <summary><span class="data-label"><strong>Health and fitness</strong> — your estimated skin type</span><span class="data-pill">Not collected</span><span class="data-chev" aria-hidden="true">▸</span></summary>
+        <dl class="data-fields">
+          <div class="data-field"><dt>Shared?</dt><dd>No</dd></div>
+          <div class="data-field"><dt>Purpose</dt><dd>To calculate a safe sun time for you rather than an average person</dd></div>
+          <div class="data-field"><dt>Where it goes</dt><dd>Stored only on your device.</dd></div>
+        </dl>
+      </details>
+      <details class="data-row" data-collected="no">
+        <summary><span class="data-label"><strong>App activity</strong> — your last UV reading and settings</span><span class="data-pill">Not collected</span><span class="data-chev" aria-hidden="true">▸</span></summary>
+        <dl class="data-fields">
+          <div class="data-field"><dt>Shared?</dt><dd>No</dd></div>
+          <div class="data-field"><dt>Purpose</dt><dd>To show a value when offline and remember your preferences</dd></div>
+          <div class="data-field"><dt>Where it goes</dt><dd>Stored only on your device.</dd></div>
+        </dl>
+      </details>
     </div>
 
     <p>

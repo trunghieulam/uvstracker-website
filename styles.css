@@ -200,6 +200,33 @@ img { max-width: 100%; height: auto; display: block; }
 .data-table th, .data-table td { text-align: left; padding: .65rem .75rem; border-bottom: 1px solid var(--line); vertical-align: top; }
 .data-table th { font-weight: 600; background: var(--cream); }
 .data-table td:nth-child(2), .data-table td:nth-child(3) { font-weight: 600; }
+
+/* privacy page: the Data Safety table as progressive disclosure instead of a wide scrolling table
+   — collapsed to name + a Collected/Not collected pill, tap for Shared/Purpose/Where. Chosen over
+   the scrolling table on mobile (2026-09-01): five text-heavy columns had no way to signal there
+   was more off-screen. Zero JS — native <details>/<summary>. Own class names, not .data-table, so
+   the other pages still using a plain scrolling table (learn/*) are unaffected. */
+.data-disclosure { display: grid; gap: .6rem; margin: 1rem 0 1.5rem; }
+.data-row { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface-raised); }
+.data-row summary {
+  list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between;
+  gap: .75rem; padding: .85rem 1rem; font-weight: 600;
+}
+.data-row summary::-webkit-details-marker { display: none; }
+.data-row summary .data-label { min-width: 0; }
+.data-chev { color: var(--ink-faint); flex: none; transition: transform .15s; }
+.data-row[open] .data-chev { transform: rotate(90deg); }
+@media (prefers-reduced-motion: reduce) { .data-chev { transition: none; } }
+.data-pill {
+  font: 700 .68rem/1 var(--body); letter-spacing: .03em; text-transform: uppercase;
+  border: 1px solid var(--line); color: var(--ink-soft); border-radius: .4rem; padding: .3rem .55rem; flex: none;
+}
+.data-row[data-collected="yes"] .data-pill { border-color: var(--accent); color: var(--accent); }
+.data-fields { padding: 0 1rem .9rem; display: grid; gap: .55rem; }
+.data-field { display: grid; grid-template-columns: 6.5rem minmax(0,1fr); gap: .1rem .8rem; padding-top: .5rem; border-top: 1px solid var(--line); }
+.data-field dt { font: 700 .72rem/1.3 var(--body); letter-spacing: .03em; text-transform: uppercase; color: var(--ink-faint); margin: 0; }
+.data-field dd { margin: 0; }
+
 .history { border-left: 3px solid var(--accent); padding-left: 1rem; }
 .history dt { font-weight: 600; }
 .history dd { margin: 0 0 .75rem; color: var(--ink-soft); }

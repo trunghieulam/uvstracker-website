@@ -90,49 +90,47 @@
     <h2 id="collects">1. Ứng dụng thu thập gì</h2>
     <p>Bảng dưới đây dùng các danh mục của mục An toàn dữ liệu (Data Safety) trên Google Play, nên nội dung bạn đọc ở đây khớp với những gì gian hàng ứng dụng công bố.</p>
 
-    <div class="table-scroll">
-    <table class="data-table">
-      <thead>
-        <tr><th scope="col">Loại dữ liệu</th><th scope="col">Có thu thập?</th><th scope="col">Có chia sẻ?</th><th scope="col">Mục đích</th><th scope="col">Dữ liệu đi đâu</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Vị trí</strong> — vị trí gần đúng</td>
-          <td>Có, chỉ khi đang dùng</td>
-          <td>Có, gửi đến Open-Meteo</td>
-          <td>Để lấy dự báo chỉ số UV cho nơi bạn đang ở</td>
-          <td>Gửi đến Open-Meteo mà không kèm mã định danh nào. Chúng tôi không lưu trữ; lượt đọc gần nhất được giữ trên thiết bị của bạn.</td>
-        </tr>
-        <tr>
-          <td><strong>Ảnh và video</strong> — khung hình camera của bầu trời</td>
-          <td>Không (chỉ xử lý trong bộ nhớ tạm)</td>
-          <td>Không</td>
-          <td>Để ước tính độ che phủ mây và tinh chỉnh chỉ số UV</td>
-          <td>Được phân tích ngay khi nhận. Không bao giờ ghi vào bộ nhớ, không bao giờ tải lên.</td>
-        </tr>
-        <tr>
-          <td><strong>Ảnh và video</strong> — một ảnh chụp mặt trong cẳng tay của bạn</td>
-          <td>Không (tệp tạm, xóa ngay lập tức)</td>
-          <td>Không</td>
-          <td>Để ước tính tông màu da của bạn</td>
-          <td>Được camera ghi vào một tệp tạm, đọc, rồi <strong>xóa ngay lập tức</strong>. Không bao giờ tải lên.</td>
-        </tr>
-        <tr>
-          <td><strong>Sức khỏe và thể chất</strong> — loại da ước tính của bạn</td>
-          <td>Không (chỉ trên thiết bị)</td>
-          <td>Không</td>
-          <td>Để tính thời gian an toàn dưới nắng riêng cho bạn thay vì cho một người trung bình</td>
-          <td>Chỉ lưu trên thiết bị của bạn.</td>
-        </tr>
-        <tr>
-          <td><strong>Hoạt động trong ứng dụng</strong> — lượt đọc UV gần nhất và cài đặt của bạn</td>
-          <td>Không (chỉ trên thiết bị)</td>
-          <td>Không</td>
-          <td>Để hiển thị một giá trị khi ngoại tuyến và ghi nhớ tùy chọn của bạn</td>
-          <td>Chỉ lưu trên thiết bị của bạn.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="data-disclosure">
+      <details class="data-row" data-collected="yes">
+        <summary><span class="data-label"><strong>Vị trí</strong> — vị trí gần đúng</span><span class="data-pill">Có thu thập</span><span class="data-chev" aria-hidden="true">▸</span></summary>
+        <dl class="data-fields">
+          <div class="data-field"><dt>Có chia sẻ?</dt><dd>Có, gửi đến Open-Meteo</dd></div>
+          <div class="data-field"><dt>Mục đích</dt><dd>Để lấy dự báo chỉ số UV cho nơi bạn đang ở</dd></div>
+          <div class="data-field"><dt>Dữ liệu đi đâu</dt><dd>Gửi đến Open-Meteo mà không kèm mã định danh nào. Chúng tôi không lưu trữ; lượt đọc gần nhất được giữ trên thiết bị của bạn.</dd></div>
+        </dl>
+      </details>
+      <details class="data-row" data-collected="no">
+        <summary><span class="data-label"><strong>Ảnh và video</strong> — khung hình camera của bầu trời</span><span class="data-pill">Không thu thập</span><span class="data-chev" aria-hidden="true">▸</span></summary>
+        <dl class="data-fields">
+          <div class="data-field"><dt>Có chia sẻ?</dt><dd>Không</dd></div>
+          <div class="data-field"><dt>Mục đích</dt><dd>Để ước tính độ che phủ mây và tinh chỉnh chỉ số UV</dd></div>
+          <div class="data-field"><dt>Dữ liệu đi đâu</dt><dd>Được phân tích ngay khi nhận. Không bao giờ ghi vào bộ nhớ, không bao giờ tải lên.</dd></div>
+        </dl>
+      </details>
+      <details class="data-row" data-collected="no">
+        <summary><span class="data-label"><strong>Ảnh và video</strong> — một ảnh chụp mặt trong cẳng tay của bạn</span><span class="data-pill">Không thu thập</span><span class="data-chev" aria-hidden="true">▸</span></summary>
+        <dl class="data-fields">
+          <div class="data-field"><dt>Có chia sẻ?</dt><dd>Không</dd></div>
+          <div class="data-field"><dt>Mục đích</dt><dd>Để ước tính tông màu da của bạn</dd></div>
+          <div class="data-field"><dt>Dữ liệu đi đâu</dt><dd>Được camera ghi vào một tệp tạm, đọc, rồi <strong>xóa ngay lập tức</strong>. Không bao giờ tải lên.</dd></div>
+        </dl>
+      </details>
+      <details class="data-row" data-collected="no">
+        <summary><span class="data-label"><strong>Sức khỏe và thể chất</strong> — loại da ước tính của bạn</span><span class="data-pill">Không thu thập</span><span class="data-chev" aria-hidden="true">▸</span></summary>
+        <dl class="data-fields">
+          <div class="data-field"><dt>Có chia sẻ?</dt><dd>Không</dd></div>
+          <div class="data-field"><dt>Mục đích</dt><dd>Để tính thời gian an toàn dưới nắng riêng cho bạn thay vì cho một người trung bình</dd></div>
+          <div class="data-field"><dt>Dữ liệu đi đâu</dt><dd>Chỉ lưu trên thiết bị của bạn.</dd></div>
+        </dl>
+      </details>
+      <details class="data-row" data-collected="no">
+        <summary><span class="data-label"><strong>Hoạt động trong ứng dụng</strong> — lượt đọc UV gần nhất và cài đặt của bạn</span><span class="data-pill">Không thu thập</span><span class="data-chev" aria-hidden="true">▸</span></summary>
+        <dl class="data-fields">
+          <div class="data-field"><dt>Có chia sẻ?</dt><dd>Không</dd></div>
+          <div class="data-field"><dt>Mục đích</dt><dd>Để hiển thị một giá trị khi ngoại tuyến và ghi nhớ tùy chọn của bạn</dd></div>
+          <div class="data-field"><dt>Dữ liệu đi đâu</dt><dd>Chỉ lưu trên thiết bị của bạn.</dd></div>
+        </dl>
+      </details>
     </div>
 
     <p>
