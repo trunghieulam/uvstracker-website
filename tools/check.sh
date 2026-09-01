@@ -14,7 +14,9 @@ for p in "${pages[@]}"; do
                 'property="og:image"' 'name="twitter:card"' 'rel="canonical"' 'rel="icon"' 'rel="manifest"'; do
     grep -q "$needle" "$p" || err "$p" "missing $needle"
   done
-  grep -qi '<script' "$p" && err "$p" "contains <script> — the site is zero-JS"
+  if grep -oiE '<script[^>]*>' "$p" | grep -viE 'type="application/ld\+json"' | grep -q .; then
+    err "$p" "executable <script> — the site is zero-JS (JSON-LD excepted)"
+  fi
   grep -qiE 'lorem|TODO|TBD' "$p" && err "$p" "placeholder text"
   grep -q 'https://uvstracker\.com' "$p" && err "$p" "apex host — use https://www.uvstracker.com"
   # Positive framing: the word 'burn' only inside 'sunburn'.
