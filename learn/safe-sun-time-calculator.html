@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safe sun time calculator — by skin type and UV index</title>
+<meta name="description" content="Pick your skin type and today's UV index to see your estimated safe sun time in minutes, plus what sunscreen changes.">
+<link rel="canonical" href="https://www.uvstracker.com/learn/safe-sun-time-calculator.html">
+<link rel="alternate" hreflang="en" href="https://www.uvstracker.com/learn/safe-sun-time-calculator.html">
+<link rel="alternate" hreflang="vi" href="https://www.uvstracker.com/vi/learn/safe-sun-time-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/safe-sun-time-calculator.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="UV Tracker">
+<meta property="og:title" content="Safe sun time calculator — by skin type and UV index">
+<meta property="og:description" content="Pick your skin type and today's UV index to see your estimated safe sun time in minutes, plus what sunscreen changes.">
+<meta property="og:url" content="https://www.uvstracker.com/learn/safe-sun-time-calculator.html">
+<meta property="og:image" content="https://www.uvstracker.com/brand/og-image-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4a90c4">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Safe sun time calculator — by skin type and UV index",
+      "inLanguage": "en",
+      "datePublished": "2026-09-01",
+      "dateModified": "2026-09-01",
+      "image": "https://www.uvstracker.com/brand/og-image-1200x630.png",
+      "author": {"@type": "Person", "name": "Trung Hieu Lam", "url": "https://www.uvstracker.com/about.html"},
+      "publisher": {"@type": "Organization", "name": "UV Tracker", "logo": {"@type": "ImageObject", "url": "https://www.uvstracker.com/brand/play-icon-512.png"}},
+      "mainEntityOfPage": "https://www.uvstracker.com/learn/safe-sun-time-calculator.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.uvstracker.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Learn", "item": "https://www.uvstracker.com/learn/"},
+        {"@type": "ListItem", "position": 3, "name": "Safe sun time calculator"}
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="../brand/mark.svg" alt="" width="30" height="30"> UV Tracker</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="index.html">Learn</a>
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy</a>
+      <a href="../terms.html">Terms</a>
+      <a href="../support.html">Support</a>
+      <a class="lang" href="../vi/learn/safe-sun-time-calculator.html" lang="vi" hreflang="vi">Tiếng Việt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="article">
+  <div class="wrap narrow">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> › <a href="index.html">Learn</a> › <span>Safe sun time calculator</span>
+    </nav>
+    <article>
+      <h1>Safe sun time calculator</h1>
+      <p class="byline">By <a href="../about.html">Trung Hieu Lam</a>, developer of UV Tracker
+        · Published <time datetime="2026-09-01">1 September 2026</time></p>
+
+      <p>
+        Pick your skin type and today's UV index. This uses the same formula as the
+        <a href="safe-sun-time-by-skin-type.html">safe sun time tables</a> — no data leaves your
+        browser.
+      </p>
+
+      <form class="calculator">
+        <label for="skin">Skin type</label>
+        <select id="skin">
+          <option value="200">I — always sunburns, never tans</option>
+          <option value="250">II — sunburns easily, tans minimally</option>
+          <option value="350" selected>III — sometimes sunburns, tans gradually</option>
+          <option value="450">IV — rarely sunburns, tans easily</option>
+          <option value="600">V — very rarely sunburns, tans darkly</option>
+          <option value="1000">VI — deeply pigmented, almost never sunburns</option>
+        </select>
+        <label for="uvi">UV index</label>
+        <select id="uvi">
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+          <option value="6" selected>6</option>
+          <option>7</option><option>8</option><option>9</option><option>10</option><option>11</option>
+        </select>
+        <label for="spf">Sunscreen</label>
+        <select id="spf">
+          <option value="1" selected>None</option>
+          <option value="15">SPF 15</option><option value="30">SPF 30</option><option value="50">SPF 50</option>
+        </select>
+        <p class="result" id="result" role="status" aria-live="polite"></p>
+      </form>
+      <span class="copy-attribution" aria-hidden="true">Source: https://www.uvstracker.com/learn/safe-sun-time-calculator.html · Free Android app: https://play.google.com/store/apps/details?id=com.uvstracker.app</span>
+
+      <h2>The full table</h2>
+      <p>With JavaScript off, or for a quick scan of every combination:</p>
+      <div class="table-scroll">
+      <table class="data-table">
+        <thead><tr><th>UV index</th><th>Type I</th><th>Type II</th><th>Type III</th><th>Type IV</th><th>Type V</th><th>Type VI</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>133</td><td>167</td><td>233</td><td>300</td><td>400</td><td>667</td></tr>
+          <tr><td>2</td><td>67</td><td>83</td><td>117</td><td>150</td><td>200</td><td>333</td></tr>
+          <tr><td>3</td><td>44</td><td>56</td><td>78</td><td>100</td><td>133</td><td>222</td></tr>
+          <tr><td>4</td><td>33</td><td>42</td><td>58</td><td>75</td><td>100</td><td>167</td></tr>
+          <tr><td>5</td><td>27</td><td>33</td><td>47</td><td>60</td><td>80</td><td>133</td></tr>
+          <tr><td>6</td><td>22</td><td>28</td><td>39</td><td>50</td><td>67</td><td>111</td></tr>
+          <tr><td>7</td><td>19</td><td>24</td><td>33</td><td>43</td><td>57</td><td>95</td></tr>
+          <tr><td>8</td><td>17</td><td>21</td><td>29</td><td>38</td><td>50</td><td>83</td></tr>
+          <tr><td>9</td><td>15</td><td>19</td><td>26</td><td>33</td><td>44</td><td>74</td></tr>
+          <tr><td>10</td><td>13</td><td>17</td><td>23</td><td>30</td><td>40</td><td>67</td></tr>
+          <tr><td>11</td><td>12</td><td>15</td><td>21</td><td>27</td><td>36</td><td>61</td></tr>
+        </tbody>
+      </table>
+      </div>
+
+      <h2>How this is calculated</h2>
+      <p>
+        1 UV index unit equals 1.5 J/m² of erythemal dose per minute, so minutes of safe sun
+        time = MED ÷ (UV index × 1.5), where MED is your skin type's Minimal Erythemal Dose
+        (Type I 200 J/m² through Type VI 1000 J/m²). See the
+        <a href="safe-sun-time-by-skin-type.html">full tables article</a> for the sources.
+      </p>
+      <p>
+        For the sunscreen figure, the theoretical maximum is safe sun time × SPF. In practice,
+        most people apply well under half the thickness sunscreen is tested at, so real-world
+        protection runs far below the label number — treat the protected figure here as an
+        optimistic ceiling, not a target, and reapply every two hours regardless.
+      </p>
+
+      <section class="get-app">
+        <p><strong>UV Tracker measures the UV where you stand</strong> — sky scan for local
+          conditions, one photo for your skin type, and your safe sun time on one card.
+          Free forever.</p>
+        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.uvstracker.app"><img src="../brand/google-play-badge-en.png" alt="Get it on Google Play" width="194" height="75" loading="lazy"></a>
+      </section>
+
+      <section class="references">
+        <h2>References</h2>
+        <ol>
+          <li>World Health Organization, <a href="https://www.who.int/publications/i/item/9241590076" rel="noopener">Global Solar UV Index: A Practical Guide</a>. Accessed 2026-09-01.</li>
+          <li>US Environmental Protection Agency, <a href="https://www.epa.gov/sunsafety/uv-index-scale-0" rel="noopener">UV Index Scale</a>. Accessed 2026-09-01.</li>
+          <li>Fitzpatrick TB. "The validity and practicality of sun-reactive skin types I through VI." <em>Archives of Dermatology</em>, 1988.</li>
+          <li>"The effect of an ultraviolet photography educational exercise on sunscreen application: A pilot study." <em>Journal of the American Academy of Dermatology</em>, research letter.</li>
+        </ol>
+        <p class="credits">UV forecast data in the app: <a href="https://open-meteo.com/" rel="noopener">Open-Meteo</a>.</p>
+        <p class="disclaimer">This article is general information, not medical advice.
+          Sun-exposure estimates are approximations. If you have concerns about your skin, or a
+          history of skin cancer in your family, see a doctor or dermatologist.</p>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="/"><img src="../brand/mark.svg" alt="" width="26" height="26"> UV Tracker</a>
+      <p>Free forever &middot; no subscriptions &middot; not a medical device.</p>
+      <p>&copy; 2026 UV Tracker &middot; uvstracker.com</p>
+      <p class="fine">Google Play and the Google Play logo are trademarks of Google LLC.</p>
+    </div>
+    <nav class="site-nav" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="index.html">Learn</a>
+      <a href="../about.html">About</a>
+      <a href="../privacy.html">Privacy policy</a>
+      <a href="../terms.html">Terms of use</a>
+      <a href="../support.html">Support</a>
+      <a class="lang" href="../vi/learn/safe-sun-time-calculator.html" lang="vi" hreflang="vi">Tiếng Việt</a>
+    </nav>
+  </div>
+</footer>
+<script>
+(function () {
+  var skin = document.getElementById('skin'),
+      uvi = document.getElementById('uvi'),
+      spf = document.getElementById('spf'),
+      out = document.getElementById('result');
+  function update() {
+    var med = Number(skin.value), u = Number(uvi.value), f = Number(spf.value);
+    var mins = Math.round(med / (1.5 * u));
+    var text = 'About ' + mins + ' minutes of safe sun time (before sunburn risk).';
+    if (f > 1) {
+      text += ' With SPF ' + f + ' applied well: up to ~' + (mins * f) +
+              ' minutes in theory — real-world coverage is usually far less.';
+    }
+    out.textContent = text;
+  }
+  skin.addEventListener('change', update);
+  uvi.addEventListener('change', update);
+  spf.addEventListener('change', update);
+  update();
+})();
+</script>
+</body>
+</html>
