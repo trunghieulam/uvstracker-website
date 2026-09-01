@@ -24,6 +24,12 @@
   --shadow: 0 1px 2px rgba(43,32,24,.06), 0 18px 40px -24px rgba(43,32,24,.35);
 }
 
+/* Outfit's font files have no Vietnamese glyphs (checked against Google's own font metadata:
+   subsets = menu/latin/latin-ext only) — every precomposed tone-mark letter (U+1EA0-1EF1: ạ, ố,
+   ộ, ơ-with-tone...) silently fell back to the system font, mid-headline. vi/ pages load Be
+   Vietnam Pro instead (full Vietnamese coverage, designed for it); English is unaffected. */
+:root:lang(vi) { --display: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif; }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --ink: #f2e9e3;
