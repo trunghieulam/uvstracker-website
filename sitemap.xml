@@ -168,4 +168,32 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/uv-clouds-shade-altitude.html"/>
     <lastmod>2026-09-01</lastmod>
   </url>
+  <url>
+    <loc>https://www.uvstracker.com/learn/sunscreen-spf-basics.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.uvstracker.com/learn/sunscreen-spf-basics.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.uvstracker.com/vi/learn/sunscreen-spf-basics.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/sunscreen-spf-basics.html"/>
+    <lastmod>2026-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.uvstracker.com/vi/learn/sunscreen-spf-basics.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.uvstracker.com/learn/sunscreen-spf-basics.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.uvstracker.com/vi/learn/sunscreen-spf-basics.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/sunscreen-spf-basics.html"/>
+    <lastmod>2026-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.uvstracker.com/learn/best-time-of-day-for-sun.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.uvstracker.com/learn/best-time-of-day-for-sun.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.uvstracker.com/vi/learn/best-time-of-day-for-sun.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/best-time-of-day-for-sun.html"/>
+    <lastmod>2026-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.uvstracker.com/vi/learn/best-time-of-day-for-sun.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.uvstracker.com/learn/best-time-of-day-for-sun.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.uvstracker.com/vi/learn/best-time-of-day-for-sun.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/best-time-of-day-for-sun.html"/>
+    <lastmod>2026-09-01</lastmod>
+  </url>
 </urlset>
