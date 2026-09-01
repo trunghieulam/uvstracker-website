@@ -224,4 +224,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/kids-sun-safety.html"/>
     <lastmod>2026-09-01</lastmod>
   </url>
+  <url>
+    <loc>https://www.uvstracker.com/learn/uv-in-vietnam.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.uvstracker.com/learn/uv-in-vietnam.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.uvstracker.com/vi/learn/uv-in-vietnam.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/uv-in-vietnam.html"/>
+    <lastmod>2026-09-01</lastmod>
+  </url>
+  <url>
+    <loc>https://www.uvstracker.com/vi/learn/uv-in-vietnam.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.uvstracker.com/learn/uv-in-vietnam.html"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.uvstracker.com/vi/learn/uv-in-vietnam.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.uvstracker.com/learn/uv-in-vietnam.html"/>
+    <lastmod>2026-09-01</lastmod>
+  </url>
 </urlset>
