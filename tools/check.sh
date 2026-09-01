@@ -16,6 +16,7 @@ for p in "${pages[@]}"; do
   done
   grep -qi '<script' "$p" && err "$p" "contains <script> — the site is zero-JS"
   grep -qiE 'lorem|TODO|TBD' "$p" && err "$p" "placeholder text"
+  grep -q 'https://uvstracker\.com' "$p" && err "$p" "apex host — use https://www.uvstracker.com"
   # Positive framing: the word 'burn' only inside 'sunburn'.
   if grep -ioE '[a-z]*burn[a-z]*' "$p" | grep -viE '^sunburn' | grep -q .; then err "$p" "'burn' outside 'sunburn'"; fi
   while read -r tag; do
@@ -31,6 +32,10 @@ for p in "${pages[@]}"; do
     [ -e "$target" ] || err "$p" "broken link: $ref"
   done < <(grep -oE '(href|src)="[^"#]+"' "$p" | sed -E 's/^(href|src)="//; s/"$//' \
            | grep -vE '^(https?:|mailto:|tel:|//)' | sort -u)
+done
+
+for f in sitemap.xml robots.txt; do
+  grep -q 'https://uvstracker\.com' "$f" && err "$f" "apex host — use https://www.uvstracker.com"
 done
 
 # Screenshot weight budget (spec §5).

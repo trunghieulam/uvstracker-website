@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /tools/
 Disallow: /brand/export/
-Sitemap: https://uvstracker.com/sitemap.xml
+Sitemap: https://www.uvstracker.com/sitemap.xml
